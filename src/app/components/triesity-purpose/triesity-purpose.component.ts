@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SplitterModule } from 'primeng/splitter';
 
 @Component({
   selector: 'triesity-purpose',

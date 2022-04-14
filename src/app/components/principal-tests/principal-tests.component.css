@@ -1,0 +1,6 @@
+.cards {
+  padding-top: 50px !important;
+}
+:host ::ng-deep .p-card {
+  margin: 20px !important;
+}

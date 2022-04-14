@@ -18,6 +18,10 @@ export class MenuComponent implements OnInit {
   private initMenu() {
     this.items = [
       {
+        label: 'Home',
+        routerLink: ['/home'],
+      },
+      {
         label: 'Linguagens',
         items: [
           {
