@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'principal-tests',
@@ -6,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./principal-tests.component.css'],
 })
 export class PrincipalTestsComponent implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('Teste');
+  }
+
+  startNow() {
+    console.log('Click Event fired');
+    this.router.navigateByUrl('/start-now');
+  }
 }

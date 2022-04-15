@@ -1,0 +1,56 @@
+<p-fieldset legend="Escolha uma opção">
+  <div class="content">
+    <div class="row">
+      <div class="col-4">
+        <h4>Linguagens</h4>
+        <ul *ngFor="let lauguage of languagues">
+          <a href="#"
+            ><li>{{ lauguage }}</li></a
+          >
+        </ul>
+      </div>
+      <div class="col-4">
+        <h4>Framework</h4>
+        <h5>&nbsp;&nbsp; Front-End</h5>
+        <ul *ngFor="let frameFront of frameworksFrontEnd">
+          <a class="li-frames-align"
+            ><li>{{ frameFront }}</li></a
+          >
+        </ul>
+        <h5>&nbsp;&nbsp;Back-end</h5>
+        <ul *ngFor="let frameBack of frameworksBackEnd">
+          <a class="li-frames-align">
+            <li>{{ frameBack }}</li></a
+          >
+        </ul>
+      </div>
+      <div class="col-4">
+        <h4>Cloud</h4>
+        <ul *ngFor="let cloud of cloudServices">
+          <a
+            ><li>{{ cloud }}</li></a
+          >
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <h4>Banco de dados</h4>
+        <ul *ngFor="let dataBase of dataBases">
+          <a
+            ><li>{{ dataBase }}</li></a
+          >
+        </ul>
+      </div>
+      <div class="col-4">
+        <h4>Container</h4>
+        <ul *ngFor="let container of containers">
+          <a
+            ><li>{{ container }}</li></a
+          >
+        </ul>
+      </div>
+      <div class="col-4"></div>
+    </div>
+  </div>
+</p-fieldset>

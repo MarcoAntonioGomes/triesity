@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'triesity-purpose',
@@ -6,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./triesity-purpose.component.scss'],
 })
 export class TriesityPurposeComponent implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
+
+  startNow() {
+    console.log('Click Event fired');
+    this.router.navigateByUrl('/start-now');
+  }
 }

@@ -61,7 +61,11 @@
             perferendis esse, cupiditate neque quas!
           </p>
           <ng-template pTemplate="footer">
-            <p-button label="Iniciar" icon="pi pi-check"></p-button>
+            <p-button
+              label="Iniciar"
+              (onClick)="startNow()"
+              icon="pi pi-check"
+            ></p-button>
           </ng-template>
         </p-card>
       </div>

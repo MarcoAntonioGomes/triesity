@@ -1,11 +1,19 @@
 import { HomeComponent } from './home.component';
-import { PrincipalTestModule } from '../principal-tests/principal-tests.module';
-import { TriesityPurposeModule } from '../triesity-purpose/triesity-purpose.module';
 import { NgModule } from '@angular/core';
+import { SplitterModule } from 'primeng/splitter';
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { PrincipalTestsComponent } from '../principal-tests/principal-tests.component';
+import { TriesityPurposeComponent } from '../triesity-purpose/triesity-purpose.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [PrincipalTestModule, TriesityPurposeModule],
-  declarations: [HomeComponent],
+  imports: [SplitterModule, ButtonModule, CardModule, RouterModule],
+  declarations: [
+    HomeComponent,
+    PrincipalTestsComponent,
+    TriesityPurposeComponent,
+  ],
   exports: [HomeComponent],
 })
 export class HomeModule {}
