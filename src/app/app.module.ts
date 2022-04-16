@@ -10,6 +10,7 @@ import { StartNowComponent } from './components/start-now/start-now.component';
 import { SplitterModule } from 'primeng/splitter';
 import { FieldsetModule } from 'primeng/fieldset';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TestInfoComponent } from './components/test-info/test-info.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -18,7 +19,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ToolbarComponent, StartNowComponent],
+  declarations: [
+    AppComponent,
+    ToolbarComponent,
+    StartNowComponent,
+    TestInfoComponent,
+  ],
   imports: [
     BrowserModule,
     MenuModule,

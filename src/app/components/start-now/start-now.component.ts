@@ -12,6 +12,7 @@ export class StartNowComponent implements OnInit {
   cloudServices: string[] = [];
   dataBases: string[] = [];
   containers: string[] = [];
+  testChosen!: string;
 
   constructor() {}
 
@@ -26,5 +27,13 @@ export class StartNowComponent implements OnInit {
     this.cloudServices = ['AWS', 'GCP'];
     this.dataBases = ['SQL', 'MYSQL', 'Redis'];
     this.containers = ['Docker'];
+  }
+
+  loadTestInfo(test: string) {
+    this.testChosen = test;
+  }
+
+  removeTestInfo() {
+    this.testChosen = '';
   }
 }

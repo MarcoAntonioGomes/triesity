@@ -3,9 +3,12 @@
     <div class="row">
       <div class="col-4">
         <h4>Linguagens</h4>
-        <ul *ngFor="let lauguage of languagues">
-          <a href="#"
-            ><li>{{ lauguage }}</li></a
+        <ul *ngFor="let lang of languagues">
+          <a
+            href="#"
+            (mouseover)="loadTestInfo(lang)"
+            (mouseout)="removeTestInfo()"
+            ><li>{{ lang }}</li></a
           >
         </ul>
       </div>
@@ -13,13 +16,20 @@
         <h4>Framework</h4>
         <h5>&nbsp;&nbsp; Front-End</h5>
         <ul *ngFor="let frameFront of frameworksFrontEnd">
-          <a class="li-frames-align"
+          <a
+            class="li-frames-align"
+            (mouseover)="loadTestInfo(frameFront)"
+            (mouseout)="removeTestInfo()"
             ><li>{{ frameFront }}</li></a
           >
         </ul>
         <h5>&nbsp;&nbsp;Back-end</h5>
         <ul *ngFor="let frameBack of frameworksBackEnd">
-          <a class="li-frames-align">
+          <a
+            class="li-frames-align"
+            (mouseover)="loadTestInfo(frameBack)"
+            (mouseout)="removeTestInfo()"
+          >
             <li>{{ frameBack }}</li></a
           >
         </ul>
@@ -27,7 +37,7 @@
       <div class="col-4">
         <h4>Cloud</h4>
         <ul *ngFor="let cloud of cloudServices">
-          <a
+          <a (mouseover)="loadTestInfo(cloud)" (mouseout)="removeTestInfo()"
             ><li>{{ cloud }}</li></a
           >
         </ul>
@@ -37,7 +47,7 @@
       <div class="col-4">
         <h4>Banco de dados</h4>
         <ul *ngFor="let dataBase of dataBases">
-          <a
+          <a (mouseover)="loadTestInfo(dataBase)" (mouseout)="removeTestInfo()"
             ><li>{{ dataBase }}</li></a
           >
         </ul>
@@ -45,7 +55,7 @@
       <div class="col-4">
         <h4>Container</h4>
         <ul *ngFor="let container of containers">
-          <a
+          <a (mouseover)="loadTestInfo(container)" (mouseout)="removeTestInfo()"
             ><li>{{ container }}</li></a
           >
         </ul>
@@ -54,3 +64,4 @@
     </div>
   </div>
 </p-fieldset>
+<test-info [test]="testChosen"></test-info>

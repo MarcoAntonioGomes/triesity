@@ -1,0 +1,26 @@
+<p-fieldset *ngIf="test && test.length > 0" legend="Informações do Teste">
+  <div class="row">
+    <div class="col-6">
+      <h5>Descrição:</h5>
+      <p>{{ testInfo.description }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <h5>Nível:</h5>
+      <p>{{ testInfo.level }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <h5>Quantidade de Questões:</h5>
+      <p>{{ testInfo.countTests }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <h5>Tempo de duração:</h5>
+      <p>{{ testInfo.durationTime }}</p>
+    </div>
+  </div>
+</p-fieldset>
